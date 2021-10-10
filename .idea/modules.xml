@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-auth/iotcloud-auth.iml" filepath="$PROJECT_DIR$/iotcloud-auth/iotcloud-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common-core/iotcloud-common-core.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common-core/iotcloud-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common-elasticsearch/iotcloud-common-elasticsearch.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common-elasticsearch/iotcloud-common-elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common-mysql/iotcloud-common-mysql.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common-mysql/iotcloud-common-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common-openfeign/iotcloud-common-openfeign.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common-openfeign/iotcloud-common-openfeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common-rabbitmq/iotcloud-common-rabbitmq.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common-rabbitmq/iotcloud-common-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common-redis/iotcloud-common-redis.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common-redis/iotcloud-common-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-common/iotcloud-common-security/iotcloud-common-security.iml" filepath="$PROJECT_DIR$/iotcloud-common/iotcloud-common-security/iotcloud-common-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-gateway/iotcloud-gateway.iml" filepath="$PROJECT_DIR$/iotcloud-gateway/iotcloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-system/iotcloud-system.iml" filepath="$PROJECT_DIR$/iotcloud-system/iotcloud-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-system/iotcloud-system-analysis/iotcloud-system-analysis.iml" filepath="$PROJECT_DIR$/iotcloud-system/iotcloud-system-analysis/iotcloud-system-analysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-system/iotcloud-system-api/iotcloud-system-api.iml" filepath="$PROJECT_DIR$/iotcloud-system/iotcloud-system-api/iotcloud-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud-system/iotcloud-system-web/iotcloud-system-web.iml" filepath="$PROJECT_DIR$/iotcloud-system/iotcloud-system-web/iotcloud-system-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotcloud2021.iml" filepath="$PROJECT_DIR$/iotcloud2021.iml" />
+    </modules>
+  </component>
+</project>

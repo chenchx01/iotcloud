@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="iotcloud-system-analysis" />
+        <module name="iotcloud-common-elasticsearch" />
+        <module name="iotcloud-common-mysql" />
+        <module name="iotcloud-auth" />
+        <module name="iotcloud-system-web" />
+        <module name="iotcloud-common-security" />
+        <module name="iotcloud-common-core" />
+        <module name="iotcloud-system-api" />
+        <module name="iotcloud-common-openfeign" />
+        <module name="iotcloud-common-rabbitmq" />
+        <module name="iotcloud-common-redis" />
+        <module name="iotcloud-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="iotcloud-auth" target="1.8" />
+      <module name="iotcloud-common" target="1.8" />
+      <module name="iotcloud-common-core" target="1.8" />
+      <module name="iotcloud-common-elasticsearch" target="1.8" />
+      <module name="iotcloud-common-mysql" target="1.8" />
+      <module name="iotcloud-common-openfeign" target="1.8" />
+      <module name="iotcloud-common-rabbitmq" target="1.8" />
+      <module name="iotcloud-common-redis" target="1.8" />
+      <module name="iotcloud-common-security" target="1.8" />
+      <module name="iotcloud-gateway" target="1.8" />
+      <module name="iotcloud-system" target="1.8" />
+      <module name="iotcloud-system-analysis" target="1.8" />
+      <module name="iotcloud-system-api" target="1.8" />
+      <module name="iotcloud-system-web" target="1.8" />
+      <module name="iotcloud2021" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="iotcloud2021" options="" />
+    </option>
+  </component>
+</project>

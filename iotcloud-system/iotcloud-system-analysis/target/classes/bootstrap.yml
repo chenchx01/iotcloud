@@ -1,0 +1,60 @@
+server:
+  port: 9531
+
+spring:
+  application:
+    name: iotcloud-system-analysis
+  profiles:
+    active: dev
+  rabbitmq:
+    addresses: 192.168.75.128
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /iot
+    listener:
+      simple:
+        concurrency: 1
+        max-concurrency: 10
+        default-requeue-rejected: false
+        retry:
+          max-attempts: 5
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/iotcloud?serverTimezone=GMT%2b8&useSSL=false&useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&
+  cloud:
+    sentinel:
+      eager: true
+      transport:
+        #配置Sentinel dashboard地址
+        dashboard: localhost:8080
+        #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口
+        port: 8719
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #Nacos服务注册中心地址
+      config:
+        # 配置中心地址
+        server-addr: localhost:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      table-underline: true
+      db-type: mysql
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  mapper-locations: classpath:/mappers/*.xml
+  type-aliases-package:  com.iotcloud.*
+  configuration:
+    map-underscore-to-camel-case=false: true

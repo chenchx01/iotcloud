@@ -1,0 +1,68 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: iotcloud-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #Nacos服务注册中心地址
+      config:
+        # 配置中心地址
+        server-addr: localhost:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+    sentinel:
+      transport:
+        #配置Sentinel dashboard地址
+        dashboard: localhost:8080
+        #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口
+        port: 8719
+    gateway:
+      routes: #配置路由路径
+        - id: iotcloud-system-web-route
+          uri: lb://iotcloud-system-web
+          predicates:
+            - Path=/web/**
+          filters:
+            - StripPrefix=1
+        - id: iotcloud-system-analysis-route
+          uri: lb://iotcloud-system-analysis
+          predicates:
+            - Path=/analysis/**
+          filters:
+            - StripPrefix=1
+        - id: iotcloud-auth-route
+          uri: lb://iotcloud-auth
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+        - id: iotcloud-test-route
+          uri: lb://iotcloud-test
+          predicates:
+            - Path=/test/**
+          filters:
+            - StripPrefix=1
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+          lower-case-service-id: true #使用小写服务名，默认是大写
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: 'http://localhost:9528/rsa/publicKey' #配置RSA的公钥访问地址
+
+secure:
+  ignore:
+    urls: #配置白名单路径
+      - "/web1/**"
+      - "/auth/oauth/token"
+
